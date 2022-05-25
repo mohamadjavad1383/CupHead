@@ -216,6 +216,7 @@ public class GameController {
             }
         }
     }
+
     public void getShotBoss3() {
         if (game.getBoss3() != null) {
             for (int i = 0; i < BossShot3.getShots3().size(); i++) {
@@ -240,7 +241,15 @@ public class GameController {
         if (game.getLives() <= 0) {
             GameView.animation.stop();
             Main.changeMenu("finishPage");
-        } //else if ()
+        } else if (!game.isDevilMode() && game.isHasBoss1() && game.getBoss1() == null) {
+            GameView.animation.stop();
+            Main.changeMenu("finishPage2");
+        } else if (game.isDevilMode() && game.isHasBoss1() && game.getBoss1() == null &&
+                game.isHasBoss2() && game.getBoss2() == null &&
+                game.isHasBoss3() && game.getBoss3() == null) {
+            GameView.animation.stop();
+            Main.changeMenu("finishPage2");
+        }
     }
 
     public void finishGame() {

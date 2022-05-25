@@ -40,7 +40,8 @@ public class BossAnimation1 extends Transition {
         boss1.getLife().setText(String.valueOf(boss1.getLives()));
 
         // devil mode
-        if (GameController.getInstance().getGame().isDevilMode()) {
+        if (GameController.getInstance().getGame() != null &&
+                GameController.getInstance().getGame().isDevilMode()) {
             Random random = new Random();
             int y, bound = 31;
             if (boss1.getY() + (y = random.nextInt(bound)) - (bound / 2) < 680 && boss1.getY() + y - (bound / 2) > 10)

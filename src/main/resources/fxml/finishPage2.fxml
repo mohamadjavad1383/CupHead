@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane prefHeight="860.0" prefWidth="1020.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="views.Finish2">
+    <Button layoutX="730.0" layoutY="639.0" mnemonicParsing="false" onMouseClicked="#back" text="back to main page"/>
+    <Button layoutX="179.0" layoutY="639.0" mnemonicParsing="false" onMouseClicked="#restart" text="restart"/>
+    <Label layoutX="493.0" layoutY="164.0" fx:id="time"/>
+    <Label layoutX="493.0" layoutY="255.0" fx:id="score"/>
+</Pane>
