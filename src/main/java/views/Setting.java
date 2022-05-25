@@ -1,6 +1,6 @@
 package views;
 
-import App.App;
+import App.Main;
 import controllers.MusicController;
 import controllers.SettingController;
 import javafx.fxml.Initializable;
@@ -23,7 +23,7 @@ public class Setting implements Initializable {
 
     public void backToMain(MouseEvent mouseEvent) {
         SettingController.getInstance().setSetting(choice.getValue());
-        App.changeMenu("mainPage");
+        Main.changeMenu("mainPage");
     }
 
     @Override

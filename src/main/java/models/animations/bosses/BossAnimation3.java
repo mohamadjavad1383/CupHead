@@ -1,6 +1,6 @@
 package models.animations.bosses;
 
-import App.App;
+import App.Main;
 import controllers.GameController;
 import javafx.animation.Transition;
 import javafx.scene.layout.Pane;
@@ -31,7 +31,7 @@ public class BossAnimation3 extends Transition {
 
         if (((3800) <= System.currentTimeMillis() % 4000) && canShot && GameController.getInstance().getGame() != null
                 && GameController.getInstance().getGame().getBoss3() != null) {
-            new BossShot3((Pane) App.getScene().getRoot(), GameController.getInstance().getGame().getBoss3());
+            new BossShot3((Pane) Main.getScene().getRoot(), GameController.getInstance().getGame().getBoss3());
         }
         Random random = new Random();
         int x, bound = 35;

@@ -15,7 +15,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.net.URL;
 
-public class App extends Application {
+public class Main extends Application {
     private static Scene scene;
     private static Popup popup;
 
@@ -47,7 +47,7 @@ public class App extends Application {
 
     private static Parent loadFXML(String name) {
         try {
-            URL address = new URL(App.class.getResource("/fxml/" + name + ".fxml").toString());
+            URL address = new URL(Main.class.getResource("/fxml/" + name + ".fxml").toString());
             return FXMLLoader.load(address);
         } catch (IOException e) {
             e.printStackTrace();

@@ -1,6 +1,6 @@
 package models.animations.bosses;
 
-import App.App;
+import App.Main;
 import controllers.GameController;
 import javafx.animation.Transition;
 import javafx.scene.image.Image;
@@ -34,7 +34,7 @@ public class BossAnimation1 extends Transition {
         }
         if (((3900) <= System.currentTimeMillis() % 4000) && canShot && GameController.getInstance().getGame() != null
                 && GameController.getInstance().getGame().getBoss1() != null) {
-            new BossShot1((Pane) App.getScene().getRoot(), boss1);
+            new BossShot1((Pane) Main.getScene().getRoot(), boss1);
         }
         boss1.getBar().setWidth((boss1.getLives() / 5) * 200);
         boss1.getLife().setText(String.valueOf(boss1.getLives()));

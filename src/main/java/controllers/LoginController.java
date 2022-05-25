@@ -1,6 +1,6 @@
 package controllers;
 
-import App.App;
+import App.Main;
 import javafx.scene.layout.Pane;
 import models.User;
 
@@ -40,7 +40,7 @@ public class LoginController {
     }
 
     public void guest() {
-        Pane pane = (Pane) App.getScene().getRoot();
+        Pane pane = (Pane) Main.getScene().getRoot();
         for (int i = 1; i <= 3; i++)
             pane.getChildren().get(i).setDisable(true);
     }

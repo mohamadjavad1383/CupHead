@@ -1,6 +1,6 @@
 package controllers;
 
-import App.App;
+import App.Main;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import javafx.scene.control.Label;
@@ -51,7 +51,7 @@ public class MainController {
     }
 
     public void showInfo() {
-        Pane pane = (Pane) App.getScene().getRoot();
+        Pane pane = (Pane) Main.getScene().getRoot();
 
         Label label = (Label) pane.getChildren().get(1);
         label.setText(User.getLoggedInUser().getUsername());

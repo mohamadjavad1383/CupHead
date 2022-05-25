@@ -1,6 +1,6 @@
 package models.bosses;
 
-import App.App;
+import App.Main;
 import controllers.GameController;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
@@ -38,7 +38,7 @@ public class Boss2 extends Rectangle {
         life.setOpacity(0);
         life.setText("");
         bar.setOpacity(0);
-        Pane pane = (Pane) App.getScene().getRoot();
+        Pane pane = (Pane) Main.getScene().getRoot();
         pane.getChildren().remove(GameController.getInstance().getGame().getBoss2());
         GameController.getInstance().getGame().setBoss2(null);
     }

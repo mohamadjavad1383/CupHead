@@ -1,6 +1,6 @@
 package controllers;
 
-import App.App;
+import App.Main;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.shape.Rectangle;
 import models.*;
@@ -239,7 +239,7 @@ public class GameController {
     public void checkGameFinish() {
         if (game.getLives() <= 0) {
             GameView.animation.stop();
-            App.changeMenu("finishPage");
+            Main.changeMenu("finishPage");
         } //else if ()
     }
 

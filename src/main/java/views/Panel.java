@@ -1,9 +1,9 @@
 package views;
 
-import App.App;
+import App.Main;
 
 public class Panel {
     public void back() {
-        App.changeMenu("gamePage");
+        Main.changeMenu("gamePage");
     }
 }

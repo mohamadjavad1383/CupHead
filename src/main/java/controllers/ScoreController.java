@@ -1,6 +1,6 @@
 package controllers;
 
-import App.App;
+import App.Main;
 import javafx.scene.control.Label;
 import javafx.scene.layout.Pane;
 import models.User;
@@ -22,7 +22,7 @@ public class ScoreController {
     }
 
     public void showInfo() {
-        Pane pane = (Pane) App.getScene().getRoot();
+        Pane pane = (Pane) Main.getScene().getRoot();
         ((Label) pane.getChildren().get(0)).setText(getSortedUser().get(0).getUsername());
         for (int i = 0; i < 9; i++) {
             if (getSortedUser().size() > i + 1)

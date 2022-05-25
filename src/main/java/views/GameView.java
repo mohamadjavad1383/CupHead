@@ -1,6 +1,6 @@
 package views;
 
-import App.App;
+import App.Main;
 import controllers.GameController;
 import controllers.MusicController;
 import controllers.PauseController;
@@ -92,7 +92,7 @@ public class GameView implements Initializable {
         }
         if (keyEvent.getCode().getName().equals("F")) {
             GameController.getInstance().finishGame();
-            App.changeMenu("mainPage");
+            Main.changeMenu("mainPage");
         }
     }
 
@@ -108,14 +108,14 @@ public class GameView implements Initializable {
 
     public void quitGame() {
         GameController.getInstance().finishGame();
-        App.changeMenu("mainPage");
+        Main.changeMenu("mainPage");
     }
 
     public void restartGame() {
         GameController.getInstance().finishGame();
         GameController.getInstance().startGame();
-        App.changeMenu("gamePage");
-        Pane pane = (Pane) App.getScene().getRoot();
+        Main.changeMenu("gamePage");
+        Pane pane = (Pane) Main.getScene().getRoot();
         pane.getChildren().get(0).requestFocus();
     }
 
@@ -131,6 +131,6 @@ public class GameView implements Initializable {
     }
 
     public void showPanel() {
-        App.changeMenu("panelPage");
+        Main.changeMenu("panelPage");
     }
 }

@@ -1,12 +1,11 @@
 package views;
 
-import App.App;
+import App.Main;
 import controllers.GameController;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.control.ProgressBar;
 import javafx.scene.image.Image;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Rectangle;
@@ -34,14 +33,14 @@ public class Finish implements Initializable {
 
     public void back() {
         GameController.getInstance().finishGame();
-        App.changeMenu("mainPage");
+        Main.changeMenu("mainPage");
     }
 
     public void restart() {
         GameController.getInstance().finishGame();
         GameController.getInstance().startGame();
-        App.changeMenu("gamePage");
-        Pane pane = (Pane) App.getScene().getRoot();
+        Main.changeMenu("gamePage");
+        Pane pane = (Pane) Main.getScene().getRoot();
         pane.getChildren().get(0).requestFocus();
     }
 }

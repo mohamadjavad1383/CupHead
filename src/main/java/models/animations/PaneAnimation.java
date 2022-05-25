@@ -1,6 +1,6 @@
 package models.animations;
 
-import App.App;
+import App.Main;
 import controllers.GameController;
 import controllers.MusicController;
 import controllers.PauseController;
@@ -28,7 +28,7 @@ public class PaneAnimation extends Transition {
 
     @Override
     protected void interpolate(double frac) {
-        Pane pane = (Pane) App.getScene().getRoot();
+        Pane pane = (Pane) Main.getScene().getRoot();
 
         // bullet animation
         if (GameController.getInstance().getGame() != null && GameController.getInstance().getGame().isOnBullet())

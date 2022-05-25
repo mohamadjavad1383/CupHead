@@ -1,11 +1,10 @@
 package views;
 
-import App.App;
-import javafx.scene.control.Label;
+import App.Main;
 import javafx.scene.input.MouseEvent;
 
 public class ScoreBoard {
     public void backToMain(MouseEvent mouseEvent) {
-        App.changeMenu("mainPage");
+        Main.changeMenu("mainPage");
     }
 }

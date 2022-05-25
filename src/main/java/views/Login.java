@@ -1,18 +1,13 @@
 package views;
 
-import App.App;
+import App.Main;
 import controllers.LoginController;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TextField;
-import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
 import models.User;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.InputStream;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -23,20 +18,20 @@ public class Login implements Initializable {
 
     public void login(MouseEvent mouseEvent) {
         String message = LoginController.getInstance().login(username.getText(), password.getText());
-        App.showPopup(message);
+        Main.showPopup(message);
         if (message.equals("successful"))
-            App.changeMenu("mainPage");
+            Main.changeMenu("mainPage");
     }
 
     public void register(MouseEvent mouseEvent) {
         String message = LoginController.getInstance().register(username.getText(), password.getText());
-        App.showPopup(message);
+        Main.showPopup(message);
         if (message.equals("successful"))
-            App.changeMenu("mainPage");
+            Main.changeMenu("mainPage");
     }
 
     public void guest() {
-        App.changeMenu("mainPage");
+        Main.changeMenu("mainPage");
         LoginController.getInstance().guest();
     }
 

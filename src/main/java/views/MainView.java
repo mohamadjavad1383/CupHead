@@ -1,6 +1,6 @@
 package views;
 
-import App.App;
+import App.Main;
 import controllers.GameController;
 import controllers.MainController;
 import controllers.ScoreController;
@@ -13,14 +13,14 @@ import javafx.scene.shape.Rectangle;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class Main implements Initializable {
+public class MainView implements Initializable {
 
     public Rectangle picture;
 
     public void playGame() {
         GameController.getInstance().startGame();
-        App.changeMenu("gamePage");
-        Pane pane = (Pane) App.getScene().getRoot();
+        Main.changeMenu("gamePage");
+        Pane pane = (Pane) Main.getScene().getRoot();
         pane.getChildren().get(0).requestFocus();
     }
 
@@ -28,12 +28,12 @@ public class Main implements Initializable {
     }
 
     public void profileMenu() {
-        App.changeMenu("profilePage");
+        Main.changeMenu("profilePage");
         MainController.getInstance().showInfo();
     }
 
     public void showScores() {
-        App.changeMenu("scoreBoardPage");
+        Main.changeMenu("scoreBoardPage");
         ScoreController.getInstance().showInfo();
     }
 
@@ -43,7 +43,7 @@ public class Main implements Initializable {
     }
 
     public void setSettings() {
-        App.changeMenu("settingPage");
+        Main.changeMenu("settingPage");
     }
 
     @Override

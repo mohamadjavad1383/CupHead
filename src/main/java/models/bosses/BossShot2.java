@@ -1,6 +1,6 @@
 package models.bosses;
 
-import App.App;
+import App.Main;
 import javafx.scene.image.Image;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.ImagePattern;
@@ -35,7 +35,7 @@ public class BossShot2 extends Circle {
     public void remove() {
         shots2.remove(this);
         this.animation.stop();
-        Pane pane = (Pane) App.getScene().getRoot();
+        Pane pane = (Pane) Main.getScene().getRoot();
         pane.getChildren().remove(this);
     }
 

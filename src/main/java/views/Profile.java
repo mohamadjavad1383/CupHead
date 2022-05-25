@@ -1,15 +1,13 @@
 package views;
 
-import App.App;
+import App.Main;
 import controllers.MainController;
 import controllers.ProfileController;
-import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.FileChooser;
 import models.User;
-import sun.applet.Main;
 
 import java.io.File;
 import java.io.IOException;
@@ -21,13 +19,13 @@ public class Profile {
 
     public void changeUsername(MouseEvent mouseEvent) {
         String message = ProfileController.getInstance().changeUsername(changeusername.getText());
-        App.showPopup(message);
+        Main.showPopup(message);
         MainController.getInstance().showInfo();
     }
 
     public void changePassword(MouseEvent mouseEvent) {
         String message = ProfileController.getInstance().changePassword(changepassword.getText());
-        App.showPopup(message);
+        Main.showPopup(message);
         MainController.getInstance().showInfo();
     }
 
@@ -35,7 +33,7 @@ public class Profile {
         FileChooser fileChooser = new FileChooser();
         fileChooser.setTitle("avatar");
         fileChooser.setInitialDirectory(new File("src/main/resources/avatars/"));
-        File file = fileChooser.showOpenDialog(App.getScene().getWindow());
+        File file = fileChooser.showOpenDialog(Main.getScene().getWindow());
         User.getLoggedInUser().setAvatar(file.getAbsolutePath());
         MainController.getInstance().showInfo();
         //fileChooser.get
@@ -43,19 +41,19 @@ public class Profile {
 
     public void deleteAccount(MouseEvent mouseEvent) {
         String message = ProfileController.getInstance().deleteAccount();
-        App.showPopup(message);
+        Main.showPopup(message);
         if (message.equals("successful"))
-            App.changeMenu("loginPage");
+            Main.changeMenu("loginPage");
     }
 
     public void exitAccount(MouseEvent mouseEvent) {
         String message = ProfileController.getInstance().exitAccount();
-        App.showPopup(message);
+        Main.showPopup(message);
         if (message.equals("successful"))
-            App.changeMenu("loginPage");
+            Main.changeMenu("loginPage");
     }
 
     public void backToMain(MouseEvent mouseEvent) {
-        App.changeMenu("mainPage");
+        Main.changeMenu("mainPage");
     }
 }

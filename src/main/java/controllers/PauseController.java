@@ -1,6 +1,6 @@
 package controllers;
 
-import App.App;
+import App.Main;
 import models.Bomb;
 import models.Bullet;
 import models.MiniBoss;
@@ -50,7 +50,7 @@ public class PauseController {
         if (GameController.getInstance().getGame().getBoss3() != null)
             GameController.getInstance().getGame().getBoss3().getAnimation().pause();
 
-        App.getScene().getRoot().requestFocus();
+        Main.getScene().getRoot().requestFocus();
     }
 
     public void unPause() {

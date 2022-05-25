@@ -1,7 +1,6 @@
 package models;
 
-import App.App;
-import controllers.GameController;
+import App.Main;
 import controllers.MusicController;
 import javafx.scene.image.Image;
 import javafx.scene.layout.Pane;
@@ -42,7 +41,7 @@ public class Bullet extends Rectangle {
     public void remove() {
         allBullets.remove(this);
         animation.stop();
-        Pane pane = (Pane) App.getScene().getRoot();
+        Pane pane = (Pane) Main.getScene().getRoot();
         pane.getChildren().remove(this);
     }
 
